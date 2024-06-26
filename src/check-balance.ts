@@ -1,7 +1,7 @@
-import { Connection, LAMPORTS_PER_SOL, PublicKey } from "@solana/web3.js";
+import { Connection, LAMPORTS_PER_SOL, PublicKey, clusterApiUrl } from "@solana/web3.js";
 const publicKey = new PublicKey('DGH7M6fFjbSt5t3EugY4JLb3fMziwZCAyCd6kVjveu9N');
 
-const connection = new Connection("https://api.devnet.solana.com", "confirmed");
+const connection = new Connection(clusterApiUrl("devnet"));
 
 const checkBalance = async () => {
   try {
